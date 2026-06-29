@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continental Ecoservice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./img/Frame 139.png">
+        </div>
+
+        <nav class="nav">
+          <a href="#">О нас</a>
+          <a href="#">Услуги</a>
+          <a href="#">Контакты</a>
+        </nav>
+
+        <div class="header-right">
+          <a href="tel:+74957556983" class="phone">+7495 755 69 83</a>
+          <button class="btn primary-btn">Заказать Услугу</button>
+          <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal" id="modal">
+
+           
+              <div class="modal-header">
+                <div>
+                  <h2 id="modalTitle">Виберіть послугу і опишіть проблему</h2>
+                  <p>Ми зв'яжемося з вами протягом 30 хвилин</p>
+                </div>
+                <button class="close-btn" id="closeBtn" aria-label="Закрити">&times;</button>
+              </div>
+
+          
+              <div id="formSection">
+                <div class="modal-body">
+
+                
+                  <div class="services-label">Послуга</div>
+                  <div class="services-grid">
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дезінфекція">
+                      <span class="check-box"></span>
+                      <span>Дезінфекція</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дератизація">
+                      <span class="check-box"></span>
+                      <span>Дератизація</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дезінсекція">
+                      <span class="check-box"></span>
+                      <span>Дезінсекція</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Інші послуги">
+                      <span class="check-box"></span>
+                      <span>Інші послуги</span>
+                    </label>
+                  </div>
+
+                 
+                  <div class="fields-row">
+                    <div class="field-group">
+                      <label>Ім'я</label>
+                      <input type="text" id="firstName" placeholder="Ім'я">
+                    </div>
+                    <div class="field-group">
+                      <label>Прізвище</label>
+                      <input type="text" id="lastName" placeholder="Прізвище">
+                    </div>
+                    <div class="field-group">
+                      <label>Email</label>
+                      <input type="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+
+                
+                  <div class="fields-row-2">
+                    <div class="field-group">
+                      <label>Телефон</label>
+                      <input type="tel" id="phone" placeholder="+380 XX XXX XX XX">
+                    </div>
+                    <div class="field-group">
+                      <label>Тип приміщення</label>
+                      <input type="text" id="roomType" placeholder="Квартира / Офіс...">
+                    </div>
+                    <div class="field-group">
+                      <label>Площа (м²)</label>
+                      <input type="number" id="area" placeholder="м²" min="1">
+                    </div>
+                  </div>
+
+                  
+                  <div class="textarea-group field-group">
+                    <label>Опис проблеми</label>
+                    <textarea id="description" placeholder="Опишіть вашу проблему детально..."></textarea>
+                  </div>
+
+                </div>
+
+                <div class="modal-footer">
+                  <button class="submit-btn" id="submitBtn">Відправити Заявку</button>
+                </div>
+              </div>
+
+             
+              <div class="success-state" id="successState">
+                <div class="success-icon">✓</div>
+                <h3>Заявку прийнято!</h3>
+                <p>Дякуємо! Наш менеджер зв'яжеться з вами найближчим часом.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="hero-content">
+        <div class="hero-left">
+          <h1>
+            <span>Дезинфекция</span><br />
+            вашего помещения
+          </h1>
+          <p>
+            Компания Континентал Экосервис занимается дератизацией,
+            дезинсекцией (уничтожение тараканов и иных насекомых, крыс,
+            мышей), дезинфекцией помещений (уничтожение бактерий, грибков,
+            вирусов, плесени).
+          </p>
+          <button class="btn secondary-btn" id="servicesViewTrigger">Просмотреть Услуги</button>
+        </div>
+        <div class="service-dialog" id="servicesModal">
+          <div class="services-modal-content">
+            <button class="close-modal" id="servicesCloseBtn"></button>
+
+           
+            <div class="view-cards">
+              <div class="service-header">
+                <h2><span>Наши</span> Услуги</h2>
+                <p>Комплексное предоставление лучших услуг</p>
+              </div>
+              <div class="service-grid">
+                <div class="service-card">
+                  <h1>Дезинфекция</h1>
+                  <p>Предлагаем свои услуги сетям супермаркетов, банкам, заведениям общественного питания, саунам,
+                    бассейнам, спортив.</p>
+                  <button class="detail-btn" data-service="dezinfection">Подробнее <img src="./img/right.png"></button>
+                </div>
+                <div class="service-card">
+                  <h1>Дератизация</h1>
+                  <p>Предлагаем свои услуги сетям супермаркетов, банкам, заведениям общественного питания, саунам,
+                    бассейнам, спортив.</p>
+                  <button class="detail-btn" data-service="deratization">Подробнее <img src="./img/right.png"></button>
+                </div>
+                <div class="service-card">
+                  <h1>Дезинсекция</h1>
+                  <p>Предлагаем свои услуги сетям супермаркетов, банкам, заведениям общественного питания, саунам,
+                    бассейнам, спортив.</p>
+                  <button class="detail-btn" data-service="dezinsection">Подробнее <img src="./img/right.png"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="view-detail hidden">
+              <button class="back-btn">← Назад</button>
+
+              <div class="detail-tabs">
+                <button class="tab-btn active" data-tab="dezinfection">
+                  <img class="tab-icon" src="./img/virus.png" alt="">
+                  Дезинфекция
+                </button>
+                <button class="tab-btn" data-tab="deratization">
+                  <img class="tab-icon" src="./img/muis.png" alt="">
+                  Дератизация
+                </button>
+                <button class="tab-btn" data-tab="dezinsection">
+                  <img class="tab-icon" src="./img/virus.png" alt="">
+                  Дезинсекция
+                </button>
+              </div>
+
+             
+              <div class="tab-content active" id="tab-dezinfection">
+                <div class="step">
+                  <h2>Шаг 1</h2>
+                  <p>Обработка поверхностей дезинфицирующим раствором. Все используемые нами препараты относятся к III и
+                    IV классу опасности, сертифицированы и разрешены к использованию на территории Российской Федерации,
+                    соответствуют СП 3.5.3.3223-14, СанПиН 3.5.2.3472-17.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 1">
+                </div>
+                <div class="step">
+                  <h2>Шаг 2</h2>
+                  <p>Контроль качества обработки и проветривание помещения. Специалист проверяет эффективность
+                    проведённой дезинфекции и при необходимости проводит повторную обработку проблемных зон.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 2">
+                </div>
+                <div class="step">
+                  <h2>Шаг 3</h2>
+                  <p>Выдача акта выполненных работ и санитарно-эпидемиологического заключения. Все документы
+                    соответствуют требованиям Роспотребнадзора.</p>
+                </div>
+              </div>
+
+           
+              <div class="tab-content hidden" id="tab-deratization">
+                <div class="step">
+                  <h2>Шаг 1</h2>
+                  <p>Обследование объекта и выявление мест обитания грызунов. Расстановка приманочных станций и ловушек
+                    в соответствии с санитарными нормами и правилами.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 1">
+                </div>
+                <div class="step">
+                  <h2>Шаг 2</h2>
+                  <p>Применение современных родентицидных препаратов. Все используемые средства сертифицированы и
+                    безопасны для людей и домашних животных при соблюдении инструкций.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 2">
+                </div>
+                <div class="step">
+                  <h2>Шаг 3</h2>
+                  <p>Контроль результатов и повторная обработка при необходимости. Выдача акта выполненных работ с
+                    рекомендациями по профилактике.</p>
+                </div>
+              </div>
+
+            
+              <div class="tab-content hidden" id="tab-dezinsection">
+                <div class="step">
+                  <h2>Шаг 1</h2>
+                  <p>Обработка помещения инсектицидными препаратами. Уничтожение насекомых всех стадий развития — яиц,
+                    личинок и взрослых особей.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 1">
+                </div>
+                <div class="step">
+                  <h2>Шаг 2</h2>
+                  <p>Обработка труднодоступных мест: щелей, плинтусов, вентиляционных отверстий. Применяются препараты
+                    холодного и горячего тумана в зависимости от типа объекта.</p>
+                  <img src="./img/clean-foto.png" alt="Шаг 2">
+                </div>
+                <div class="step">
+                  <h2>Шаг 3</h2>
+                  <p>Проветривание и влажная уборка после обработки. Выдача акта выполненных работ и рекомендаций по
+                    профилактике повторного появления насекомых.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="hero-image">
+          <img src="./img/hero-img.png">
+        </div>
+      </div>
+
+      <div class="service-slider">
+  <div class="service-slide active">
+    <div class="service-image">
+      <img src="./img/img-hero2.jpg">
+    </div>
+    <div class="service-info">
+      <h3>Дезинфекция</h3>
+      <p>уничтожение бактерий, грибков, вирусов, плесени</p>
+      <a href="#">Подробнее</a>
+    </div>
+  </div>
+
+  <div class="service-slide">
+    <div class="service-image">
+      <img src="./img/maus-slider.png">
+    </div>
+    <div class="service-info">
+      <h3>Дератизация</h3>
+      <p>уничтожение грызунов (крыс, мышей, полёвок...)</p>
+      <a href="#">Подробнее</a>
+    </div>
+  </div>
+
+  <div class="service-arrows">
+    <button class="arrow-btn prev">&#8249;</button>
+    <button class="arrow-btn next">&#8250;</button>
+  </div>
+
+</div>
+
+        </div>
+        <div class="our-contacts">
+          <div class="social-media">
+            <img src="./img/instagram-logo.png">
+            <img src="./img/facebook.png">
+            <img src="./img/wa.png">
+            <img src="./img/viber.png">
+            <img src="./img/telegram.png">
+          </div>
+          <div class="solid-line">
+            <span></span>
+          </div>
+          <div class="our-info">
+            <h1><span>Наши</span>Контакты</h1>
+            <div class="line">
+              <span>График работы</span>
+              <p>Пн - Пт 9:00 - 17:00</p>
+            </div>
+            <div class="line">
+              <span>Адрес</span>
+              <p>Москва, ул. Нижегородская, 29-33</p>
+            </div>
+            <div class="line">
+              <span>Поддержка</span>
+              <p>+7 (495) 227-56-56<br>
+                ecoservice@gmail.com</p>
+            </div>
+            <button class="btn primary-btn open-dialog">заказать услугу</button>
+          </div>
+        </div>
+  </section>
+  <script src="./main-evenrs.js"></script>
+</body>
+
+</html>
