@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about-us.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>about-us</title>
+</head>
+
+<body>
+ 
+  <header>
+      <div class="logo">
+        <img src="./img/Frame 139.png">
+        <a href="./index.html"></a>
+      </div>
+ <button class="burger" id="burgerBtn" aria-label="Меню">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+      <nav class="nav">
+        <a href="./about-us.html">О нас</a>
+        <a href="./services.html">Услуги</a>
+        <a href="#">Контакты</a>
+
+
+        <div class="header-right">
+          <a href="tel:+74957556983" class="phone">+7495 755 69 83</a>
+          <button class="btn primary-btn">Заказать Услугу</button>
+          <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal" id="modal">
+
+
+              <div class="modal-header">
+                <div>
+                  <h2 id="modalTitle">Виберіть послугу і опишіть проблему</h2>
+                  <p>Ми зв'яжемося з вами протягом 30 хвилин</p>
+                </div>
+                <button class="close-btn" id="closeBtn" aria-label="Закрити">&times;</button>
+              </div>
+
+
+              <div id="formSection">
+                <div class="modal-body">
+
+
+                  <div class="services-label">Послуга</div>
+                  <div class="services-grid">
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дезінфекція">
+                      <span class="check-box"></span>
+                      <span>Дезінфекція</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дератизація">
+                      <span class="check-box"></span>
+                      <span>Дератизація</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Дезінсекція">
+                      <span class="check-box"></span>
+                      <span>Дезінсекція</span>
+                    </label>
+                    <label class="service-item">
+                      <input type="checkbox" name="service" value="Інші послуги">
+                      <span class="check-box"></span>
+                      <span>Інші послуги</span>
+                    </label>
+                  </div>
+
+
+                  <div class="fields-row">
+                    <div class="field-group">
+                      <label>Ім'я</label>
+                      <input type="text" id="firstName" placeholder="Ім'я">
+                    </div>
+                    <div class="field-group">
+                      <label>Прізвище</label>
+                      <input type="text" id="lastName" placeholder="Прізвище">
+                    </div>
+                    <div class="field-group">
+                      <label>Email</label>
+                      <input type="email" id="email" placeholder="Email">
+                    </div>
+                  </div>
+
+
+                  <div class="fields-row-2">
+                    <div class="field-group">
+                      <label>Телефон</label>
+                      <input type="tel" id="phone" placeholder="+380 XX XXX XX XX">
+                    </div>
+                    <div class="field-group">
+                      <label>Тип приміщення</label>
+                      <input type="text" id="roomType" placeholder="Квартира / Офіс...">
+                    </div>
+                    <div class="field-group">
+                      <label>Площа (м²)</label>
+                      <input type="number" id="area" placeholder="м²" min="1">
+                    </div>
+                  </div>
+
+
+                  <div class="textarea-group field-group">
+                    <label>Опис проблеми</label>
+                    <textarea id="description" placeholder="Опишіть вашу проблему детально..."></textarea>
+                  </div>
+
+                </div>
+
+                <div class="modal-footer">
+                  <button class="submit-btn" id="submitBtn">Відправити Заявку</button>
+                </div>
+              </div>
+
+
+              <div class="success-state" id="successState">
+                <div class="success-icon">✓</div>
+                <h3>Заявку прийнято!</h3>
+                <p>Дякуємо! Наш менеджер зв'яжеться з вами найближчим часом.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <div class="section-about-us">
+  <img src="./img/icon-bg.png" class="bg-decor" alt="" aria-hidden="true">
+  <div class="text-container">
+    <h1><span>О</span> Нас </h1>
+    <p>Компания Continental Ecoservice уже более 5-ти лет успешно предоставляет услуги по уничтожению всех видов
+      вредных насекомых и грызунов. </p>
+  </div>
+  <div class="img-container">
+    <img class="side-img" src="./img/usimg.png">
+    <img class="middle-img" src="./img/us.png">
+    <img class="side-img" src="./img/ushero.png">
+  </div>
+</div>
+  <div class="features">
+    <div class="features-container">
+      <img src="./img/tehnology.png">
+      <h1><span>Современные</span> Технологии</h1>
+      <p>Также, мы проводим дезинфекцию любых помещений вне зависимости от размера как методом холодного тумана, так и
+        обработкой облучателями открытого типа. </p>
+    </div>
+    <div class="features-container">
+      <img src="./img/diamand.png">
+      <h1><span>Гарантия</span> качества</h1>
+      <p>Предоставляем весь необходимый для Роспотребнадзора пакет документов. Все применяемые препараты сертифицированы
+        и одобрены к использованию на территории РФ.</p>
+    </div>
+    <div class="features-container">
+      <img src="./img/night.png">
+      <h1><span>Удобный</span> график</h1>
+      <p>Услуги нашей компании доступны для клиента 24/7, в любое удобное время: как в ночное время суток, так и в
+        выходной день. </p>
+    </div>
+  </div>
+  <div class="our-trust">
+    <div class="text-container">
+      <h1><span>Нам</span> Доверяют</h1>
+      <p>Выбирая Continental Ecoservice Вы отдаете предпочтение качеству! </p>
+    </div>
+    <div class="company-img">
+      <div class="company-item">
+        <img src="./img/rostelekom.png">
+      </div>
+      <div class="company-item">
+        <img src="./img/da.png">
+      </div>
+      <div class="company-item">
+        <img src="./img/documents.png">
+      </div>
+      <div class="company-item">
+        <img src="./img/uruk.png">
+      </div>
+    </div>
+  </div>
+   <div class="our-contacts">
+    <div class="social-media">
+      <img src="./img/instagram-logo.png">
+      <img src="./img/facebook.png">
+      <img src="./img/wa.png">
+      <img src="./img/viber.png">
+      <img src="./img/telegram.png">
+    </div>
+    <div class="solid-line">
+      <span></span>
+    </div>
+    <div class="our-info">
+      <h1><span>Наши</span>Контакты</h1>
+      <div class="line">
+        <span>График работы</span>
+        <p>Пн - Пт 9:00 - 17:00</p>
+      </div>
+      <div class="line">
+        <span>Адрес</span>
+        <p>Москва, ул. Нижегородская, 29-33</p>
+      </div>
+      <div class="line">
+        <span>Поддержка</span>
+        <p>+7 (495) 227-56-56<br>
+          ecoservice@gmail.com</p>
+      </div>
+      <button class="btn primary-btn open-dialog">заказать услугу</button>
+    </div>
+  </div>
+  <div class="footer-bottom">
+  <p>© Continental Ecoservice, 2020</p>
+</div>
+<script src="./js/main-evenrs.js"></script>
+</body>
+
+</html>
